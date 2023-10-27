@@ -1,86 +1,82 @@
-Queuing System
-Table of Contents
-Introduction
-Features
-Getting Started
-Prerequisites
-Installation
-Usage
-Configuration
-Contributing
-License
-Introduction
-The Queuing System is a Ruby on Rails application designed to facilitate the management of queues. It offers a user-friendly interface for clients to join queues and administrators to manage queue entries.
+# Queue System Project
 
-Features
-Client Functionality:
+## Table of Contents
 
-Clients can join the queue.
-Clients can view their position in the queue.
-Clients can see the number of people in front of them.
-Clients can leave the queue.
-Admin Functionality:
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
 
-Admins can remove clients from the front of the queue.
-Clients receive notifications when they are removed.
-Queues automatically adjust when clients are removed.
-Security:
+## Introduction
 
-User authentication and authorization.
-Encrypted data transmission.
-Secure sessions and cookies.
-Logging and Auditing:
+The Queue System Project is a Ruby on Rails application that provides a virtual queuing system with both client and admin functionality. It allows multiple clients to join a queue, maintain their order, and view their position in the queue. Admins can manage the queue by removing clients, sending notifications, and more.
 
-Keep track of queue entries and admin actions.
-Audit trail for accountability.
-Getting Started
-Prerequisites
-Before you begin, ensure you have met the following requirements:
+## Features
 
-Ruby (>= 2.7)
-Ruby on Rails (>= 6)
-PostgreSQL or your preferred database system
-Installation
-Clone this repository:
+- **Client Functionality:**
+  - Join the queue.
+  - View position in the queue.
+  - See the number of clients in front.
+  - Leave the queue.
 
-bash
-Copy code
-git clone https://github.com/yourusername/queuing-system.git
-Navigate to the project directory:
+- **Admin Functionality:**
+  - Remove clients from the front of the queue.
+  - Send notifications to clients.
+  - Manage the queue efficiently.
 
-bash
-Copy code
-cd queuing-system
-Install the required gems:
+## Getting Started
 
-bash
-Copy code
-bundle install
+### Prerequisites
+
+- Ruby (>= 2.7.0)
+- Ruby on Rails (>= 7.0.0)
+- PostgreSQL (>= 9.4)
+- Bundler (for managing gem dependencies)
+
+### Installation
+
+1. Clone the repository:
+
+   ```shell
+   git clone https://github.com/matomugo60/2queue-system-ruby.git
+
+Install gem dependencies:
+
+
+
+        cd queue-system-project
+        bundle install
+        
 Set up the database:
 
-bash
-Copy code
-bin/rails db:create
-bin/rails db:migrate
+
+      rails db:create
+      rails db:migrate
+      
 Start the Rails server:
 
-bash
-Copy code
-bin/rails server
-The application should now be running at http://localhost:3000.
 
-Usage
-Register as an admin or client using the provided registration form.
-Clients can join the queue, view their position, and leave the queue.
-Admins can manage the queue, remove clients, and view the audit trail.
-Enjoy a streamlined queuing experience!
+          rails server
+
+          
+Your queuing system will be accessible at http://localhost:3000.
+
+### Usage
+
+Clients can access the queue system by signing up or logging in.
+Admins can log in to access the admin dashboard.
+Clients can join the queue, and admins can manage the queue by removing clients.
+Notifications are sent to clients when they are removed from the queue.
 Configuration
-Database configuration is located in config/database.yml.
-Environment-specific configurations are in the config/environments directory.
-Modify config/application.rb to change application-wide settings.
+Database configuration, secret keys, and other settings can be adjusted in the config/database.yml and config/application.rb files.
+To configure the email notifications, provide SMTP settings in the config/environments/development.rb and config/environments/production.rb files.
 Contributing
-Contributions are welcome! Please read the Contributing Guidelines for details.
+We welcome contributions from the community. If you would like to contribute to the project, please follow our contribution guidelines.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
+### License
+This project is licensed under the MIT License.
