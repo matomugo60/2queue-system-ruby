@@ -1,4 +1,4 @@
-module AdminHelper
+module AdminsHelper
   # Check if a user is an admin
   def user_admin?(user)
     user && user.admin?

@@ -1,4 +1,4 @@
-module ClientHelper
+module ClientsHelper
   # Check if a user is a client
   def user_client?(user)
     user && user.client?

@@ -1,5 +1,8 @@
-class ClientsController < ApplicationController
-  before_action :authenticate_client!
+class ClientsController < ApplicationController 
+
+  include ClientsHelper
+  skip_before_action :verify_authenticity_token, only: [:create]
+  before_action :authenticate_user!
   before_action :set_client, only: [:show, :edit, :update, :destroy]
 
   def index
